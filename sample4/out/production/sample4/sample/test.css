@@ -1,0 +1,20 @@
+/* graph maxerror */
+.default-color3.chart-series-line {
+    -fx-stroke: blue, blue;
+}
+
+.default-color3.chart-line-symbol {
+    -fx-background-color: #FFFFFF, blue;
+}
+
+
+/* graph maxerror */
+.default-color2.chart-series-line {
+    -fx-stroke: green, green;
+}
+
+.default-color2.chart-line-symbol {
+    -fx-background-color: #FFFFFF, green;
+}
+
+

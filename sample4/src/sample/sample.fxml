@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<TabPane maxHeight="1000" maxWidth="1000" prefHeight="718.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerSample">
+  <tabs>
+    <Tab text="Select data">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="709.0" prefWidth="1000.0">
+               <children>
+                  <Button fx:id="button_file" layoutX="403.0" layoutY="16.0" mnemonicParsing="false" onAction="#open_file_input" text="..." AnchorPane.leftAnchor="403.0" AnchorPane.topAnchor="16.0" />
+                  <TextField fx:id="text_file_input" layoutX="101.0" layoutY="16.0" prefHeight="25.0" prefWidth="302.0" text="data2.txt" AnchorPane.leftAnchor="101.0" AnchorPane.topAnchor="16.0" />
+                  <TitledPane animated="false" layoutX="391.0" layoutY="-89.0" text="untitled" />
+                  <Accordion layoutX="16.0" layoutY="90.0" prefHeight="583.0" prefWidth="973.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="90.0">
+                    <panes>
+                      <TitledPane animated="false" prefHeight="554.0" prefWidth="973.0" text="Initial Data">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="data_real" layoutX="74.0" layoutY="30.0" prefHeight="494.0" prefWidth="853.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Normalized Data">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="table_data_input" layoutX="-116.0" layoutY="-118.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="452.0" prefWidth="852.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Label layoutX="16.0" layoutY="19.0" text="Main sourse:" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="19.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="458.0" layoutY="19.0" text="Add Y sample:" AnchorPane.leftAnchor="458.0" AnchorPane.topAnchor="19.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="Text_Y" layoutX="553.0" layoutY="17.0" prefHeight="25.0" prefWidth="266.0" text="DataAdd.txt" AnchorPane.leftAnchor="553.0" AnchorPane.topAnchor="17.0" />
+                  <Button fx:id="button_file_y" layoutX="819.0" layoutY="17.0" mnemonicParsing="false" onAction="#open_file_input_y" text="..." AnchorPane.leftAnchor="819.0" AnchorPane.topAnchor="17.0" />
+                  <Button fx:id="box_down_main" layoutX="101.0" layoutY="49.0" mnemonicParsing="false" onAction="#ONbox_down_main" text="Download" AnchorPane.leftAnchor="101.0" AnchorPane.topAnchor="49.0" />
+                  <Button fx:id="box_down_y" disable="true" layoutX="553.0" layoutY="49.0" mnemonicParsing="false" onAction="#Onbox_down_y" text="Download" AnchorPane.leftAnchor="553.0" AnchorPane.topAnchor="49.0" />
+                  <TitledPane expanded="false" layoutX="690.0" layoutY="49.0" text="Initial parameters">
+                     <content>
+                        <Accordion layoutX="696.0" layoutY="49.0" prefHeight="146.0" prefWidth="295.0">
+                          <panes>
+                            <TitledPane prefHeight="143.0" prefWidth="285.0" text="dimension of data">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="171.0" layoutY="61.0" prefHeight="20.0" prefWidth="25.0" text="Y" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="20.0" layoutY="22.0" text="X_1">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="172.0" layoutY="22.0" text="X_3">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="20.0" layoutY="61.0" text="X_2">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="box_x1" layoutX="52.0" layoutY="20.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+                                          <TextField fx:id="box_x2" layoutX="52.0" layoutY="59.0" prefHeight="25.0" prefWidth="44.0" text="1" />
+                                          <TextField fx:id="box_y" layoutX="204.0" layoutY="59.0" prefHeight="25.0" prefWidth="44.0" text="3" />
+                                          <TextField fx:id="box_x3" layoutX="204.0" layoutY="20.0" prefHeight="25.0" prefWidth="44.0" text="3" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" prefHeight="96.0" prefWidth="295.0" text="lenght of sample">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="283.0">
+                                       <children>
+                                          <TextField fx:id="box_length" layoutX="25.0" layoutY="20.0" text="1313" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </content>
+                  </TitledPane>
+                  <Button fx:id="box_clean_data" layoutX="876.0" layoutY="17.0" mnemonicParsing="false" onAction="#Onbox_clean_data" prefHeight="25.0" prefWidth="110.0" text="Clean data" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Running">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Accordion layoutX="835.0" layoutY="231.0" prefHeight="457.0" prefWidth="305.0" AnchorPane.rightAnchor="-140.0" AnchorPane.topAnchor="231.0">
+                    <panes>
+                      <TitledPane animated="false" prefHeight="414.0" prefWidth="305.0" text="polynomial type">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="Radio1" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnRadio1" selected="true" text="Chebyshev" />
+                                    <RadioButton fx:id="Radio2" layoutX="23.0" layoutY="59.0" mnemonicParsing="false" onAction="#OnRadio2" text="Lejandr" />
+                                    <RadioButton fx:id="Radio3" layoutX="23.0" layoutY="104.0" mnemonicParsing="false" onAction="#OnRadio3" text="Lagger" />
+                                    <RadioButton fx:id="Radio4" layoutX="23.0" layoutY="149.0" mnemonicParsing="false" onAction="#OnRadio4" text="Hermit" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="10.0" prefHeight="143.0" prefWidth="285.0" text="dimension of polynomial">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="293.0">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="22.0" text="P_1">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="96.0" text="P_3">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="61.0" text="P_2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="box_p1" layoutX="52.0" layoutY="20.0" prefHeight="25.0" prefWidth="44.0" text="5" />
+                                    <TextField fx:id="box_p2" layoutX="52.0" layoutY="59.0" prefHeight="25.0" prefWidth="44.0" text="5" />
+                                    <TextField fx:id="box_p3" layoutX="52.0" layoutY="94.0" prefHeight="25.0" prefWidth="44.0" text="5" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="85.0" prefHeight="562.0" prefWidth="274.0" text="Other options">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="185.0" prefWidth="293.0">
+                                 <children>
+                                    <ToggleButton fx:id="SecondLevelTogether" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" selected="true" text="Second Level Together" />
+                                    <TextField fx:id="Y_order" layoutX="66.0" layoutY="14.0" prefHeight="25.0" prefWidth="86.0" text="1" />
+                                    <Label layoutX="14.0" layoutY="16.0" text="Y order">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ToggleButton fx:id="ButArith_mean" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Arithmetic mean" />
+                                    <ToggleButton fx:id="lambda3Systems" layoutX="14.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="3 systems for 1'st level" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Accordion prefHeight="689.0" prefWidth="834.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                      <TitledPane animated="false" prefHeight="625.0" prefWidth="695.0" text="Y[i] first level Error">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <LineChart fx:id="y0_first_level" layoutX="10.0" prefHeight="541.0" prefWidth="880.0" AnchorPane.bottomAnchor="19.200000000000045" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.200000000000045" AnchorPane.topAnchor="0.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Y[i] last level Error">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <LineChart fx:id="Y0_last_level" layoutX="118.0" layoutY="21.0" prefHeight="541.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane prefHeight="200.0" prefWidth="200.0" text="Graph Y norm">
+                           <content>
+                              <LineChart fx:id="Graph_Y_norm">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </content>
+                        </TitledPane>
+                      <TitledPane animated="false" text="Graph Y">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <LineChart fx:id="Graph_Y" layoutX="163.0" layoutY="30.0" prefHeight="541.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Button fx:id="clean1" layoutX="954.0" layoutY="33.0" mnemonicParsing="false" onAction="#OnClean" text="Clean" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0" />
+                  <Button fx:id="b_tets" layoutX="834.0" layoutY="68.0" mnemonicParsing="false" onAction="#test" prefHeight="25.0" prefWidth="166.0" text="Calculate" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0" />
+                  <Button layoutX="834.0" layoutY="33.0" mnemonicParsing="false" onAction="#OnButton_Draw_real" text="Draw real graphs" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="33.0" />
+                  <Button layoutX="834.0" layoutY="2.0" mnemonicParsing="false" onAction="#OnButton_Draw_model" prefHeight="25.0" prefWidth="166.0" text="Draw model graphs" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="835.0" layoutY="93.0" text="Max error 1'st level:" AnchorPane.rightAnchor="61.0" AnchorPane.topAnchor="93.0" />
+                  <TextField fx:id="Text_err1" editable="false" layoutX="834.0" layoutY="110.0" prefHeight="25.0" prefWidth="166.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0" />
+                  <TextField fx:id="Text_err_res" editable="false" layoutX="834.0" layoutY="152.0" prefHeight="25.0" prefWidth="166.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="152.0" />
+                  <Label layoutX="835.0" layoutY="135.0" text="Max error last level:" textAlignment="RIGHT" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="135.0" />
+                  <Label layoutX="835.0" layoutY="177.0" text="Max error last level recover:" textAlignment="RIGHT" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="177.0" />
+                  <TextField fx:id="Text_err_res_recover" editable="false" layoutX="834.0" layoutY="194.0" prefHeight="25.0" prefWidth="166.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="194.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Results">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="478.0" layoutY="25.0" mnemonicParsing="false" onAction="#OnButtonRes" text="..." />
+                  <TextField fx:id="Text_res" layoutX="187.0" layoutY="25.0" prefHeight="25.0" prefWidth="291.0" text="Results.txt" />
+                  <TextArea fx:id="Text_results" layoutX="33.0" layoutY="77.0" prefHeight="579.0" prefWidth="943.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="77.0" />
+                  <Label layoutX="33.0" layoutY="28.0" text="Path to the &quot;Results file&quot;:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Forecast">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ProgressBar fx:id="Progress2" layoutX="15.0" layoutY="525.0" prefWidth="193.0" progress="0.0">
+                     <effect>
+                        <ColorAdjust hue="0.5" />
+                     </effect>
+                  </ProgressBar>
+                  <Label layoutX="13.0" layoutY="198.0" prefHeight="23.0" prefWidth="92.0" text="Robust" />
+                  <TextArea fx:id="Text_robust" layoutX="15.0" layoutY="222.0" prefHeight="42.0" prefWidth="190.0" />
+                  <Button fx:id="But_fore" layoutX="14.0" layoutY="92.0" mnemonicParsing="false" onAction="#On_button_forecast" prefHeight="25.0" prefWidth="193.0" text="Run" />
+                  <Label layoutX="30.0" layoutY="130.0" text="Time" />
+                  <TextField fx:id="Text_time" layoutX="13.0" layoutY="147.0" prefHeight="25.0" prefWidth="60.0" text="1001" />
+                  <TitledPane layoutX="13.0" layoutY="270.0" prefHeight="226.0" prefWidth="189.0" text="Vivid data">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <Label layoutX="15.0" layoutY="71.0" text="Fuel, L" />
+                              <Label layoutX="15.0" layoutY="136.0" text="Acc. voltage, V" />
+                              <TextField fx:id="Text_grid" layoutX="15.0" layoutY="36.0" prefHeight="25.0" prefWidth="158.0" />
+                              <Label layoutX="15.0" layoutY="14.0" text="Grid voltage, V" />
+                              <TextField fx:id="Text_fuel" layoutX="15.0" layoutY="99.0" prefHeight="25.0" prefWidth="157.0" />
+                              <TextField fx:id="Text_acc" layoutX="15.0" layoutY="167.0" prefHeight="25.0" prefWidth="157.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <ProgressBar fx:id="Progress3" layoutX="14.0" layoutY="525.0" prefWidth="193.0" progress="0.34">
+                     <effect>
+                        <ColorAdjust hue="0.9" />
+                     </effect></ProgressBar>
+                  <Label layoutX="14.0" layoutY="506.0" text="Warring lavel" />
+                  <ProgressBar fx:id="Progress1" layoutX="15.0" layoutY="525.0" prefWidth="193.0" progress="0.24">
+                     <effect>
+                        <ColorAdjust hue="-0.5" />
+                     </effect>
+                  </ProgressBar>
+                  <Slider fx:id="SliderTime" disable="true" layoutX="14.0" layoutY="178.0" max="1313.0" prefHeight="14.0" prefWidth="192.0" value="1001.0">
+                     <effect>
+                        <DropShadow color="#bc9a92" spread="0.1" />
+                     </effect>
+                  </Slider>
+                  <SplitPane dividerPositions="0.5" layoutX="220.0" layoutY="92.0" orientation="VERTICAL" prefHeight="583.0" prefWidth="769.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="92.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4883720930232558" layoutX="-297.0" layoutY="-81.0" prefHeight="96.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="158.0" prefWidth="78.0">
+                                       <children>
+                                          <LineChart fx:id="Graph_fuel" layoutX="-166.0" layoutY="-85.0" prefHeight="246.0" prefWidth="375.0" title="Fuel, l" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <LineChart fx:id="Graph_acc" layoutX="-101.0" layoutY="-61.0" prefHeight="94.0" prefWidth="77.0" title="Acc. voltage, V" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                             </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <LineChart fx:id="Graph_grid" layoutX="-271.0" layoutY="-114.0" prefHeight="96.0" prefWidth="158.0" title="Grid voltage, V" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <TextField fx:id="Text_window" layoutX="81.0" layoutY="147.0" prefHeight="25.0" prefWidth="60.0" text="40" />
+                  <Label layoutX="89.0" layoutY="130.0" text="Window" />
+                  <Label layoutX="148.0" layoutY="130.0" text="Prediction" />
+                  <TextField fx:id="Text_prediction" layoutX="145.0" layoutY="147.0" prefHeight="25.0" prefWidth="60.0" text="10" />
+                  <AreaChart fx:id="Graph_level" layoutY="545.0" prefHeight="109.0" prefWidth="207.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="545.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+                  <TextArea fx:id="Text_foR_for" layoutX="15.0" layoutY="14.0" prefHeight="78.0" prefWidth="974.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
